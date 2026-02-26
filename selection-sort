@@ -1,0 +1,10 @@
+class Solution: 
+    def selectionSort(self, arr):
+        result=[]
+        for i in range(len(arr)):
+            smallest=i
+            for j in range(len(arr)-1):
+                if arr[j]>arr[smallest]:
+                    arr[j],arr[smallest]=arr[smallest],arr[j]
+                    result.append(smallest)
+        return result
