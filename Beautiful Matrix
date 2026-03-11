@@ -1,0 +1,14 @@
+def beautiful_m():
+    one_row = 0
+    one_col = 0
+    for r in range(1, 6):  
+        row_values = list(map(int, input().split()))
+        for c in range(1, 6):
+            if row_values[c - 1] == 1:
+                one_row = r
+                one_col = c
+    moves = abs(one_row - 3) + abs(one_col - 3)
+    print(moves)
+
+
+beautiful_m()
